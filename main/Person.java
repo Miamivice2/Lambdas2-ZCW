@@ -1,3 +1,5 @@
+package main;
+
 import java.time.LocalDate;
 
 
@@ -14,15 +16,23 @@ import java.time.LocalDate;
 
         public int getAge() {
 
+            return 0;
         }
 
-        public void printPerson() {
+        public Person(String name, Sex gender, String emailAddress) {
+            this.name = name;
+            this.gender = gender;
+            this.emailAddress = emailAddress;
+        }
+
+        public String  printPersons() {
             System.out.println(toString());
+            return toString();
         }
 
         @Override
         public String toString() {
-            return "Person{" +
+            return "main.Person{" +
                     "name='" + name + '\'' +
                     ", birthday=" + birthday +
                     ", gender=" + gender +
